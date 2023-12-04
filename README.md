@@ -11,3 +11,10 @@ CSS 선택자 작성법
 -CSS 색상 속성-
 color : 글자 색상
 background-color : 배경색상
+
+# CSS style Sheet
+-----------------------------------
+## CSS 작성위치
+* 내부스타일시트 <head><style>여기 작성</style></head>
+* 외부스타일시트 styles/파일명.css 별도 생성 후
+    <link rel="stylesheet" href="./styles/파일명.css">
