@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>선택자-1</title>
+    <style>
+        /* 내부 스타일 시트 */
+        /* 
+            메모위치
+
+         */
+        
+        
+        /* .title h1 {color: yellow;}
+        .test {color: aquamarine;}
+        h2.test {background-color: blue;} */
+        .title {background-color: violet;}
+        .title h1 {color: tomato;}
+        .title .txt_wrap {background-color: blueviolet;}
+        .title .txt_wrap .txt_1 {background-color: teal;}
+        .title .txt_wrap .txt_1 .sub_title {color: salmon;}
+        .title .txt_wrap .txt_1 .name {color: cadetblue;}
+        .title .txt_wrap .txt_1 h2.test {color: blue;}
+        .title .txt_wrap .txt_1 p.test {color: aqua;}
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h1>contents</h1>
+        <div class="txt_wrap">
+            <div class="txt_1">
+                <p class="sub_title">티빙 top1 프로그램</p>
+                <p class="name">스트릿 우먼 파이터2</p>
+                <h2 class="test">제목 테스트</h2>
+                <p class="test">내용 테스트</p>
+            </div>   
+        </div>
+    </div>
+</body>
+</html>
