@@ -14,15 +14,69 @@
 
         .box p:nth-of-type(1) {border: 1px solid gold;}
         .box p:nth-of-type(2) {border: 2px solid brown;}
-        .box p:nth-of-type(3) {border: 3px solid wheat;}
+        .box p:nth-of-type(3) {border: 3px solid wheat; font-size: 3rem;}
+
+        .box h1:first-child {color: sienna;}
+        .box p:last-of-type {color: violet;}
+
+        .box p:nth-last-child(2) {font-size: 5rem;}
+        .box p:nth-last-of-type(3) {font-size: 9rem;}
+
+        ul {}
+        ul li {
+            border: 1px solid #555;
+            width: 200px; height: 200px;
+            display: inline-block;
+        }
+        ul li:first-child {border-width: 5px;}
+        ul li:nth-last-child(4) {border-color: darkgreen;}
+        ul li:nth-child(4) {color:darkorange; font-size: 1.3rem;}
+        ul li:nth-child(even) {background-color: salmon;}
+        ul li:nth-child(odd) {background-color: cornflowerblue;}
+        ul li:nth-child(4n+1) {background-color: skyblue;}
+        ul li:nth-child(3n+1) {background-color: darkcyan;}
+        ul li:nth-child(2n+1) {background: linear-gradient(rgb(255, 149, 149), rgb(139, 139, 252)) ;}
     </style>
 </head>
 <body>
     <div class="box">
         <h1>제목</h1>
         <p>1</p>
-        <p>2</p>
-        <p>3</p>
+        <p>2023년</p>
+        <p>5월</p>
     </div>
+    <hr>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4 일혁이 생일</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+    </ul>
 </body>
 </html>
