@@ -1,0 +1,36 @@
+/* character.html 전용 css */
+
+main {
+    background-color: #f1f1f1; height: 100vh;
+    text-align: center;
+}
+main h1 {padding: 30px 30px;}
+main h2 {padding-bottom: 30px;}
+main .family {
+    background-color: dodgerblue;
+    width: 85%;
+    padding: 50px auto 50px;
+}
+main .family thead {border-bottom: 2px solid #222;}
+main .family thead tr {}
+main .family thead tr th {padding: 15px;}
+main .family thead tr th:nth-child(1) {width: 80px;}
+main .family thead tr th:nth-child(2) {width: 250px;}
+main .family tbody {background-color: bisque;}
+main .family tbody tr {}
+main .family tbody tr th {}
+main .family tbody tr td {}
+main h2 {padding:30px 30px;}
+main .character {
+    background-color: dodgerblue;
+    width: 85%;
+}
+main .character thead {border-bottom: 2px solid #222;}
+main .character thead tr {}
+main .character thead tr th {padding: 15px;}
+main .character thead tr th:nth-child(1) {width: 80px;}
+main .character thead tr th:nth-child(2) {width: 250px;}
+main .character tbody {background-color: bisque;}
+main .character tbody tr {}
+main .character tbody tr th {}
+main .character tbody tr td {}

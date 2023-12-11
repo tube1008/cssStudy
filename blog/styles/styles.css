@@ -1,0 +1,16 @@
+/*  font-family: 'omyu_pretty'; */
+
+/* index.hrml main 전용 */
+/* 메인 */
+main video {width: 100%;}
+main video source{}
+main .contents {
+    background-color: #4b9244;
+    font-size: 2rem;
+    font-family: 'omyu_pretty';
+    padding: 40px 60px;
+}
+main .contents span {
+    font-size: 2rem;
+    color: crimson;
+}
