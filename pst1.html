@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        #all {
+            background-color: tomato;
+            width: 500px; height: 500px; padding: 20px; margin: 20px;
+            /* absolute의 부모에게 잡기 명령 설정하기 = 다른 position 중 적합한 대상 입력하기
+                (필수 후보 모두 가능하지만 일반적으로 relative를 가장 많이 사용한다.)
+            */
+            /* position: relative; <--일반적인 잡기대상 */
+        }
+        #all .box{
+            width: 100px; line-height: 100px; text-align: center; font-size: 3rem;
+        }
+        #all .a{
+            background-color: aqua;
+        }
+        #all .b{
+            background-color: yellow;
+            /* position: relative; left: 200px; top: 50px; */
+            position: absolute; right: 0;
+        }
+        #all .c{
+            background-color: lime;
+        }
+        /* nav-position 연습 */
+        header {
+            background-color: palevioletred;
+            /* width: 1134px; margin: 0 auto; */
+            width: calc(100% - 30px); margin: 0 auto;
+            height: 110px;
+        }
+        header .top {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: yellowgreen;
+            height: 100%;
+        }
+        header .top h1 {
+            width: 120px; height: 80px;
+            background-color: slateblue;
+        }
+        header .top nav {}
+        header .top nav .gnb {
+            /* li 형제 2개를 옆으로 정렬하고 싶다 -> 정렬 -> flex */
+            /* flex가 필요하면 누구한테 준다? 정렬대상의 부모 gnb */
+            display: flex; flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        header .top nav .gnb > li {
+            background-color: aqua;
+        }
+        header .top nav .gnb > li > a {
+            background-color: bisque;
+            padding: 10px 30px; display: block;
+            /* paddubg 적용후 생선된 문제점 : 겹침현상 */
+            /* 위 문제는 누구때문? a가 인라인이기 때문 */
+            /* 해결하려면? 부모한테 flex를 줘야하는가 a한테 block을 줘야하는가 */
+            /* 부모에 flex를 준다는 뜻은? 부모 안 자식들의 정렬방향 및 방법정하기 */
+            /* a에 block준다는 뜻은? 인라인을 블록으로 변경하는 속성변경 */
+        }
+        header .top nav .gnb > li:nth-child(1) {}
+        header .top nav .gnb > li:nth-child(2) {}
+        header .top nav .gnb > li .lnb {}
+        header .top nav .gnb > li .lnb li{}
+        header .top nav .gnb > li .lnb li a{
+
+        }
+        header .top nav .gnb > li .lnb li:nth-child(1){}
+        header .top nav .gnb > li .lnb li:nth-child(2){}
+        /* guess */
+        #guess {
+            background-color: black;
+            display: flex; flex-flow: row nowrap;
+            width: calc(100% - 32px); margin: 0 auto;
+            justify-content: flex-start;
+            align-items: center;
+            height: 110px;
+        }
+        #guess h1 {
+            background-color: aqua;
+            width: 100px; height: 60px;
+            margin-right: 44px;}
+        #guess nav {}
+        #guess nav .gnb {
+            display: flex; flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+        }
+        #guess nav .gnb > li {}
+        #guess nav .gnb > li:nth-child(1) {}
+        #guess nav .gnb > li:nth-child(2) {}
+        #guess nav .gnb > li > a {
+            background-color: blue;
+            width: 130px; 
+            display: block;
+            text-align: center;
+            padding: 7px 0;
+        }
+        #guess nav .gnb > li > .lnb {
+            display: flex; flex-flow: row nowrap;
+        }
+        #guess nav .gnb > li > .lnb li {
+        }
+        #guess nav .gnb > li > .lnb li:nth-child(1) {}
+        #guess nav .gnb > li > .lnb li:nth-child(2) {}
+        #guess nav .gnb > li > .lnb li:nth-child(3) {}
+        #guess nav .gnb > li > .lnb li a {
+            background-color: bisque;
+            display: block;
+            padding: 10px 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="all">
+        <p class="box a">A</p>
+        <p class="box b">B</p>
+        <p class="box c">C</p>
+    </div>
+    <hr>
+    <header>
+        <div class="top">
+            <h1>로고</h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">메인메뉴1</a>
+                        <ul class="lnb">
+                            <li><a href="#">메뉴1-서브1</a></li>
+                            <li><a href="#">메뉴1-서브2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메인메뉴2</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <hr>
+    <div id="guess">
+        <h1>GUESS</h1>
+        <nav>
+            <ul class="gnb">
+                <li><a href="남성">남성</a></li>
+                <li><a href="여성">여성</a>
+                    <ul class="lnb">
+                        <li><a href="#">아우터</a></li>
+                        <li><a href="#">티셔츠</a></li>
+                        <li><a href="#">셔츠</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#guess {
+    background-color: cadetblue;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: calc(100% - 32px); margin: 0 auto;
+    height: 110px;
+}
+#guess h1 {
+    width: 100px; height: 60px;
+    background-color: aqua;
+    margin-right: 44px;
+}
+#guess nav {}
+#guess nav .gnb {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+#guess nav .gnb > li {}
+#guess nav .gnb > li:nth-child(1) {}
+#guess nav .gnb > li:nth-child(2) {}
+#guess nav .gnb > li > a {
+    background-color: blueviolet;
+    width: 130px;
+    padding: 7px 0;
+    display: flex;
+    flex-wrap: row nowrap;
+    display: block;
+    text-align: center;
+    font-size: 1.25rem;
+}
+#guess nav .gnb > li > .lnb {
+    display: flex;
+}
+#guess nav .gnb > li > .lnb li {
+
+}
+#guess nav .gnb > li > .lnb li:nth-child(1) {}
+#guess nav .gnb > li > .lnb li:nth-child(2) {}
+#guess nav .gnb > li > .lnb li:nth-child(3) {}
+#guess nav .gnb > li > .lnb li a {
+    background-color: plum;
+    display: block;
+    padding: 10px 30px;
+}
