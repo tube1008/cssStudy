@@ -1,0 +1,9 @@
+#login {
+    width: 350px; padding: 20px;
+    border: 1px solid #f1f1f1;
+}
+#login .login_link {
+    background-color: #19ce60; color: #fff;
+    text-align: center; width: 100%; display: block; padding: 20px 0;
+}
+#login .search_join {display: flex; justify-content: space-between;}
