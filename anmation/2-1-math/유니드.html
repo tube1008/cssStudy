@@ -13,7 +13,7 @@
         #h_bg {
             background:rgba(255,255,255,0.8);
             position:fixed; left:0; top:0; z-index:999; width:100%;
-            animation:top_ani 0.5s ease both;
+            animation:top_ani 0.5s ease both; 
         }
         #h_bg header {
             width:1200px; height:100px; margin:0 auto;
@@ -60,17 +60,33 @@
             width:1200px; height:100vh; margin: 0 auto;
             display:flex; justify-content: space-between; align-items:center;
         }
-        main .center h1 {color:#fff; display:flex; flex-flow:column nowrap; justify-content: space-between;}
-        main .center h1 span {font-size:3.5rem; letter-spacing:-2.5px; padding:10px 0;}
-        main .center .right {
-            position:relative; right:174px; top:-100px;
+        main .center h1 {display:flex; flex-flow:column nowrap; justify-content: space-between; }
+        main .center h1 span {
+            color: #fff; 
+            font-size:3.5rem; letter-spacing:-2.5px; padding:10px 0;}
+        main .center h1 span:nth-child(1) {animation: txt 0.5s both;}   
+        main .center h1 span:nth-child(2) {animation: txt 0.5s 0.3s both;}  
+        main .center .right { 
+            position:relative; right:174px; top:-100px; animation: circle 1.5s both;
         }
-        main .center .right span {
+        main .center .right span {  
             position:absolute; width:174px; height:174px;
         }
-        main .center .right span:nth-child(1) {}
-        main .center .right span:nth-child(2) {text-align:center; line-height:174px;}
+        main .center .right span:nth-child(1) {animation: rotate 30s linear alternate infinite;}
+        main .center .right span:nth-child(2) {text-align:center; line-height:174px; }
         /* animation */
+        @keyframes txt {
+            0% {opacity: 0; transform: translateY(0px);}
+            100% {opacity: 1; transform: translateY(-50px);}
+        }
+        @keyframes circle {
+            0% {opacity: 0; transform: translateX(100px);}
+            100% {opacity: 1; transform: translateX(0);}
+        }
+        @keyframes rotate {
+            0% { transform: rotate(0);}
+            100% {transform: rotate(360deg);}
+        }
     </style>
 </head>
 <body>

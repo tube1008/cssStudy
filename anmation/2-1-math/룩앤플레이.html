@@ -21,33 +21,33 @@
         main {height:150vh; }
         main #visual {background:#26bad7; min-width:1200px; margin:0 auto; height:550px; position:relative;}
         main #visual #deco {position:relative; width:1200px; margin:0 auto;}
-        main #visual #deco .obj {position:absolute;}
+        main #visual #deco .obj {position:absolute; animation: rotate1 2s linear alternate infinite; }
 
-        main #visual #deco .obj1 {
+        main #visual #deco .obj1 { animation: rotate 15s linear alternate infinite;
             top:170px; left:50%; margin-left:-342px;
         }
-        main #visual #deco .obj2 {
+        main #visual #deco .obj2 { animation: scale 1s alternate infinite;
             left:0; top:150px;
         }
-        main #visual #deco .obj3 {
+        main #visual #deco .obj3 { animation: rotate 2s linear alternate infinite;
             left:100px; top:250px;
         }
-        main #visual #deco .obj4 {
+        main #visual #deco .obj4 { animation: scale 1s alternate infinite;
             left:150px; top:350px;
         }
-        main #visual #deco .obj5 {
+        main #visual #deco .obj5 { animation: rotate 2s linear alternate-reverse infinite;
             right:0; top:150px;
         }
-        main #visual #deco .obj6 {
+        main #visual #deco .obj6 { animation: rotate 2s linear alternate infinite;
             right:200px; top:250px;
         }
-        main #visual #deco .obj7 {
+        main #visual #deco .obj7 { animation: scale 1s alternate infinite;
             right:200px; top:240px;
         }
-        main #visual #deco .obj8 {
+        main #visual #deco .obj8 { animation: rotate 2s linear alternate-reverse infinite;
             left:270px; top:440px;
         }
-        main #visual #deco .obj9 {
+        main #visual #deco .obj9 { animation: scale 1s alternate infinite;
             right:0; top:440px;
         }
 
@@ -69,7 +69,18 @@
         main .category a.active {background:#26bad7; color:#fff;}
 
         /* 애니메이션 */
-
+        @keyframes rotate {
+            0% { transform: rotate(0);}
+            100% { transform: rotate(30deg);}
+        }
+        @keyframes rotate1 {
+            0% { transform: rotate(0);}
+            100% { transform: rotate(360deg);}
+        }
+        @keyframes scale {
+            0% { transform: scale(1);}
+            100% { transform: scale(1.5);}
+        }
     </style>
 </head>
 <body>
