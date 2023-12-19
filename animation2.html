@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation2</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .ball {
+            /* animation: right500 2s;*/
+            /* animation: shoot1 1s; */
+            animation: shoot1 1s ease 3 alternate both;
+        }
+        .ball img {
+            width: 100px; height: 100px;
+            animation: shoot2 1s linear infinite;
+        }
+        /* animation 호출용 keyframe 생성 위치 */
+        @keyframes right500 {
+            0% {transform: translateX(0);}
+            100% {transform: translateX(500px);}
+        }
+        @keyframes right800rotate {
+            0% {transform: rotate(0) translateX(0);}
+            100% {transform: rotate(180deg) translateX(800px);}
+        }
+        @keyframes shoot1 {
+            0% {transform: translateX(0) ;}
+            100% {transform: translateX(800px)}
+        }
+        @keyframes shoot2 {
+            0% {transform:  rotate(0);}
+            100% {transform:  rotate(360deg)}
+        }
+    </style>
+</head>
+<body>
+    <div class="ball"><img src="./animation_icon/football.png" alt=""></div>
+</body>
+</html>
