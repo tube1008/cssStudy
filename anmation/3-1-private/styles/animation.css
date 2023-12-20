@@ -1,0 +1,15 @@
+/* 애니메이션 */
+@keyframes rotate {
+    0% { transform: rotate(0);}
+    100% { transform: rotate(-360deg);}
+}
+@keyframes move {
+    0% {background-position-X: 0;}
+    100% {background-position-X: 999px;}
+}
+
+main .bg_wrap .bg1{animation: move 15s both linear infinite;}
+main .bg_wrap .bg2{animation: move 10s both linear infinite;}
+main .bg_wrap .bg3{animation: move 5s both linear infinite;}
+
+main .car #left_tire, main .car #right_tire {animation: rotate 0.5s linear  infinite;}
