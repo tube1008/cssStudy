@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+</head>
+<style>
+    main {
+        max-width: 1200px; margin: 0 auto;
+        display: grid;
+        grid-template-areas: 
+                            'item1 item2 item3' 
+                            ' item4 item5 item6'  
+                            ;
+                            /* 활용법 2가지 */
+                            grid-template-columns: repeat(3. 32%);
+                            grid-template-columns: repeat(3. calc(33% - 10px));
+                            justify-content: space-between;
+    }
+    /* main a {margin-right: 15px;}
+    main a :nth-child(3n) {margin-right: 0;} */
+    main a {}
+    main a:nth-child(odd) {margin-right: 15px;}
+    main a .photo {height: 500px; overflow: hidden; position: relative;}
+    main a .photo img {position: absolute; width: 100%; top: 100px;}
+    main a h2 {
+        font-size: 10rem; font-weight: 800;
+        line-height: 1.5; border-bottom: 1px solid #ddd;
+        padding: 0 0 20px; margin: 0 0 20px;
+    }
+    main a h2+p {margin: 0 0 40px; font-size: 8rem;}
+    main a .price {font-size: 8rem; font-weight: 800; padding: 0 0 40px;}
+    /* grid-item */
+    main .item1 {grid-area: item1;}
+    main .item2 {grid-area: item2;}
+    main .item3 {grid-area: item3;}
+    main .item4 {grid-area: item4;}
+    main .item5 {grid-area: item5;}
+    main .item6 {grid-area: item6;}
+</style>
+<body>
+    <main>
+        <a href="#" class="item1">
+            <p class="photo">
+                <img src="./images/car.jpg" alt="">
+            </p>
+            <h2>쿼카가 주는 크리스마스 선물</h2>
+            <p>행복한 쿼카와 함께~!</p>
+            <p class="price">10,000원</p>
+        </a>
+    </main>
+    <main>
+        <a href="#" class="item2">
+            <p class="photo">
+                <img src="./images/car.jpg" alt="">
+            </p>
+            <h2>쿼카가 주는 크리스마스 선물</h2>
+            <p>행복한 쿼카와 함께~!</p>
+            <p class="price">10,000원</p>
+        </a>
+    </main>
+    <main>
+        <a href="#" class="item3">
+            <p class="photo">
+                <img src="./images/car.jpg" alt="">
+            </p>
+            <h2>쿼카가 주는 크리스마스 선물</h2>
+            <p>행복한 쿼카와 함께~!</p>
+            <p class="price">10,000원</p>
+        </a>
+    </main>
+    <main>
+        <a href="#" class="item4">
+            <p class="photo">
+                <img src="./images/car.jpg" alt="">
+            </p>
+            <h2>쿼카가 주는 크리스마스 선물</h2>
+            <p>행복한 쿼카와 함께~!</p>
+            <p class="price">10,000원</p>
+        </a>
+    </main>
+    <main>
+        <a href="#" class="item5">
+            <p class="photo">
+                <img src="./images/car.jpg" alt="">
+            </p>
+            <h2>쿼카가 주는 크리스마스 선물</h2>
+            <p>행복한 쿼카와 함께~!</p>
+            <p class="price">10,000원</p>
+        </a>
+    </main>
+    <main>
+        <a href="#" class="item6">
+            <p class="photo">
+                <img src="./images/car.jpg" alt="">
+            </p>
+            <h2>쿼카가 주는 크리스마스 선물</h2>
+            <p>행복한 쿼카와 함께~!</p>
+            <p class="price">10,000원</p>
+        </a>
+    </main>
+</body>
+</html>
